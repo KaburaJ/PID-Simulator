@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PID-Simulator/static/css/main.c1ed3b94.css",
-    "main.js": "/PID-Simulator/static/js/main.77abc785.js",
+    "main.css": "/PID-Simulator/static/css/main.f9cf2717.css",
+    "main.js": "/PID-Simulator/static/js/main.8a3e379f.js",
     "index.html": "/PID-Simulator/index.html",
-    "main.c1ed3b94.css.map": "/PID-Simulator/static/css/main.c1ed3b94.css.map",
-    "main.77abc785.js.map": "/PID-Simulator/static/js/main.77abc785.js.map"
+    "main.f9cf2717.css.map": "/PID-Simulator/static/css/main.f9cf2717.css.map",
+    "main.8a3e379f.js.map": "/PID-Simulator/static/js/main.8a3e379f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1ed3b94.css",
-    "static/js/main.77abc785.js"
+    "static/css/main.f9cf2717.css",
+    "static/js/main.8a3e379f.js"
   ]
 }
