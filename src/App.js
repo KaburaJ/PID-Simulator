@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import PidSimulator from './pid';
+import PidSimulator from './components/pid';
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('home');
