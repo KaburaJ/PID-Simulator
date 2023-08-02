@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
+import './pid.css'
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 
@@ -19,28 +20,24 @@ const PidSimulator = () => {
     let interval;
 
     const pdController = () => {
-      // Calculate error, proportional, and derivative terms (as before)
       const error = setpoint - processVariable[processVariable.length - 1];
       const proportional = kp * error;
       const derivative = kd * (error - (processVariable[processVariable.length - 2] || 0));
 
-      // Calculate integral term
       const integral = ki * error;
 
-      // Calculate PID output
       const pidOutput = proportional + derivative + integral;
 
-      // Update process variable, data arrays (as before)
       setProcessVariable(prevProcessVariable => [...prevProcessVariable.slice(1), pidOutput]);
       setErrorData(prevErrorData => [...prevErrorData.slice(1), error]);
       setDerivativeData(prevDerivativeData => [...prevDerivativeData.slice(1), derivative]);
 
       // Calculate robot position based on the PID output and error
       const centerPosition = 50; // Assuming the center of the line is at position 50
-      const newPosition = centerPosition + pidOutput; // Adjust position based on PID output
+      const newPosition = centerPosition + pidOutput; 
 
       // Check if the robot is within the track boundaries
-      const trackWidth = 20; // Adjust this value according to your track dimensions
+      const trackWidth = 20; 
       const trackMinPosition = centerPosition - trackWidth / 2;
       const trackMaxPosition = centerPosition + trackWidth / 2;
       const constrainedPosition = Math.min(Math.max(newPosition, trackMinPosition), trackMaxPosition);
@@ -71,13 +68,12 @@ const PidSimulator = () => {
 
     if (isSimulationRunning) {
       startSimulation();
-      setTimeout(stopSimulation, 60000); // Stop simulation after one minute
+      setTimeout(stopSimulation, 60000); 
     }
 
     return () => clearInterval(interval);
   }, [kp, kd, ki, setpoint, isSimulationRunning]);
 
-  // Update KP, KD values
   const handleKpChange = value => {
     setKp(value);
   };
@@ -92,7 +88,7 @@ const PidSimulator = () => {
 
   const handleStartSimulation = () => {
     if (!isSimulationRunning) {
-      setProcessVariable(Array.from({ length: 100 }, () => 0)); // Reset process variable
+      setProcessVariable(Array.from({ length: 100 }, () => 0)); 
       setIsSimulationRunning(true);
     }
   };
@@ -155,7 +151,7 @@ const PidSimulator = () => {
     },
     {
       x: time,
-      y: processVariable.map((_, i) => kp * errorData[i]), // Calculate proportional values
+      y: processVariable.map((_, i) => kp * errorData[i]),
       type: 'scatter',
       mode: 'lines',
       name: 'Proportional',
@@ -176,6 +172,7 @@ const PidSimulator = () => {
       title: 'Value',
     },
   }}
+  style={{marginLeft:"-1em"}}
 />
         <Plot
           data={[
@@ -202,9 +199,10 @@ const PidSimulator = () => {
               title: 'Position',
               tickmode: 'linear',
               dtick: 10,
-              showticklabels: false, // Hide y-axis labels
+              showticklabels: false, 
             },
           }}
+          style={{marginLeft:"-1em"}}
         />
       </div>
     </div>

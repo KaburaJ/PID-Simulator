@@ -1,0 +1,53 @@
+.pid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  div > label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  div > input[type='range'] {
+    width: 100%;
+  }
+  
+  div > button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  div > button:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+  }
+  
+  .plot-container {
+    margin-top: 30px;
+  }
+  
+  .Plotly__container {
+    width: 100%;
+  }
+  
+  .Plotly__view .svg-container {
+    width: 100%;
+  }
+  
+  .Plotly__draglayer {
+    display: none;
+  }
+  
