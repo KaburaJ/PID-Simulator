@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PID-Simulator/static/css/main.c1ed3b94.css",
+    "main.js": "/PID-Simulator/static/js/main.77abc785.js",
+    "index.html": "/PID-Simulator/index.html",
+    "main.c1ed3b94.css.map": "/PID-Simulator/static/css/main.c1ed3b94.css.map",
+    "main.77abc785.js.map": "/PID-Simulator/static/js/main.77abc785.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1ed3b94.css",
+    "static/js/main.77abc785.js"
+  ]
+}
