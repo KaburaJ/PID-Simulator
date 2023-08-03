@@ -27,10 +27,13 @@ The application can be accessed [here](https://kaburaj.github.io/PID-Simulator/)
 ## Installation
 To run the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/KaburaJ/PID-Simulator.git`
+1. Clone the repository:
+```git clone https://github.com/KaburaJ/PID-Simulator.git```
 2. Navigate to the project directory: `cd PID-Simulator`
-3. Install the dependencies: `npm install`
-4. Start the development server: `npm start`
+3. Install the dependencies:
+```npm install```
+4. Start the development server:
+```npm start```
 5. Open your web browser and visit `http://localhost:3000` to access the application.
 
 ## Contributing
